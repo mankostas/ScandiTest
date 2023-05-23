@@ -15,5 +15,8 @@ module.exports = {
     rules: {
         '@typescript-eslint/object-curly-spacing': 'off',
         // TODO: disable or enable rules here
+        'react/forbid-dom-props': '1',
+        'react/jsx-no-bind': '0'
     },
 };
+
