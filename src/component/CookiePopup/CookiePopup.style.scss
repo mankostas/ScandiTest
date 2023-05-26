@@ -1,0 +1,97 @@
+/**
+ * ScandiPWA - Progressive Web App for Magento
+ *
+ * Copyright © Scandiweb, Inc. All rights reserved.
+ * See LICENSE for license details.
+ *
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/scandipwa
+ * @link https://github.com/scandipwa/scandipwa
+ */
+
+.CookiePopup {
+    --cookie-popup-bottom-margin: 0px;
+
+    background-color: black;
+    position: fixed;
+    inset-block-end: var(--cookie-popup-bottom-margin);
+    display: flex;
+    opacity: 0.9;
+    align-items: center;
+    width: fit-content;
+    z-index: 200; 
+
+    @include desktop {
+        inset-inline-start: 50%;
+        transform: translateX(-50%);
+        padding: 10px 10px;
+        width: 100%;
+        justify-content: center;
+
+
+        &:dir(rtl) {
+            transform: translateX(50%);
+        }
+    }
+
+    @include mobile {
+        inset-block-end: calc(var(--footer-total-height) + var(--cookie-popup-bottom-margin));
+        flex-direction: column;
+        width: calc(100% - 32px);
+        margin-inline: 16px;
+        padding: 20px 16px;
+    }
+
+    &-Content {
+        color: white;
+        font-size: 17px;
+        font-weight: 700;
+        margin-block-end: 0;
+        max-width: 1400px;
+        width: 100%;
+        
+
+        &::after {
+            content: '.';
+            color: var(--color-white);
+        }
+        
+        @include mobile {
+	    text-align: center;
+    	}
+    }
+
+    &-Link {
+        font-size: 17px;
+        color: #F9BBAC;
+    }
+
+    &-CTA {
+        color: #ffffff;
+        //color: var(--primary-base-color);
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 17px;
+        cursor: pointer;
+        white-space: nowrap;
+        background: #F9BBAC;
+        padding: 25px 50px;
+
+        @include desktop {
+            margin-inline-start: 41px;
+        }
+
+        @include mobile {
+            margin-block-start: 20px;
+    	    padding: 10px 40px;
+    	    max-width: 400px;
+    	    width: 100%;
+    	    text-align: center;
+        }
+
+        &:hover {
+            color: var(--primary-dark-color);
+        }
+    }
+}
+
