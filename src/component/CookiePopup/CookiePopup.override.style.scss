@@ -27,7 +27,6 @@
     }
 
     &-Content {
-        text-align: start;
         max-width: 1400px;
         width: 100%;
         
@@ -35,6 +34,10 @@
         &::after {
             content: '.';
             color: var(--color-white);
+        }
+
+        @include desktop {
+        text-align: start;
         }
         
         @include mobile {
