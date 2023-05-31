@@ -1,10 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle';
 
 import Link from 'Component/Link';
 import { ReactElement } from 'Type/Common.type';
-import SidebarContent from 'Component/Sidebar/SidebarContent';
 import { HeaderComponent as SourceHeaderComponent } from 'SourceComponent/Header/Header.component';
+import SideMenu from 'Component/SideMenu';
 
 /** @namespace Elegento/Component/Header/Component */
 export class HeaderComponent extends SourceHeaderComponent {
@@ -19,7 +18,7 @@ export class HeaderComponent extends SourceHeaderComponent {
         if (isMobile) {
             return (
                 <>
-                    <SidebarContent />
+                    <SideMenu />
                     <Link
                       to="/"
                       aria-label="Go to homepage by clicking on ScandiPWA logo"
