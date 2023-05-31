@@ -13,10 +13,11 @@ module.exports = {
         },
     },
     rules: {
-        '@typescript-eslint/object-curly-spacing': 'off',
+        '@typescript-eslint/object-curly-spacing': 0,
         // TODO: disable or enable rules here
-        'react/forbid-dom-props': '1',
-        'react/jsx-no-bind': '0'
+        'react/forbid-dom-props': 0,
+        'react/jsx-no-bind': 0,
+        "simple-import-sort/imports": 0,
     },
 };
 
