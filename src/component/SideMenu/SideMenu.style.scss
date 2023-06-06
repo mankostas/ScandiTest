@@ -1,3 +1,43 @@
-.SideMenu {
-background-color: #000;
+.SideMenu > button {
+    border: none;
+    padding: 5px 11px;
+    border-radius: 5px;
+}
+
+#cst_sidebar .offcanvas-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 24px;
+}
+
+.offcanvas {
+    position: fixed;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    color: #000;
+    visibility: hidden;
+    background-color: #fff;
+    background-clip: padding-box;
+    outline: 0;
+    transition: transform .3s ease-in-out;
+}
+
+.offcanvas.offcanvas-start {
+    inset-inline-start: 0;
+    width: 300px;
+    border-right: 2px solid #f26323;
+    transform: translateX(-100%);
+}
+
+.offcanvas.show:not(.hiding), .offcanvas.showing {
+    transform: none;
+}
+
+.offcanvas.hiding, .offcanvas.show, .offcanvas.showing {
+    visibility: visible;
 }
